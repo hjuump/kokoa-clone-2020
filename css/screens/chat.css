@@ -69,6 +69,38 @@
   margin-right: 5px;
   font-size: 18px;
 }
+@keyframes bubbleStatusUpDown {
+  0% {
+    transform: none;
+  }
+  20% {
+    transform: translateY(-4px);
+  }
+  40% {
+    transform: none;
+  }
+  100% {
+    transform: none;
+  }
+}
+.message__bubble__status {
+  display: flex;
+  animation-delay: 1s;
+}
+.message__bubble__status__circle {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  margin: 6px 2px;
+  animation: bubbleStatusUpDown 2s ease-in-out infinite;
+}
+.message__bubble__status__circle:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.message__bubble__status__circle:last-child {
+  animation-delay: 0.4s;
+}
 .message__time {
   font-size: 12px;
   opacity: 0.7;
